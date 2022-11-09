@@ -119,4 +119,41 @@ public class schleifen {
         
     }
     
-}
+    
+    public static void teilbarkeit() {
+        int zaehler = 1;
+        
+        while (zaehler <= 100) {
+            // 1. Gib die Zahl aus, wenn sie durch 5 teilbar ist
+            // 2. Gib die Zahl aus, wenn sie durch 5 teilbar ist, 
+            //    aber nicht durch 3
+            if (zaehler / 5 * 5 == zaehler){
+                System.out.println(zaehler + " ist durch fünf teilbar " );
+                
+                if (zaehler / 3 * 3 == zaehler){
+                    System.out.println("leider auch durch 3");
+                }
+                else {
+                    System.out.println(zaehler + " ist nicht durch 3 teilbar");
+                }
+            }
+            else{
+                System.out.println(zaehler + " ist nicht durch 5 teilbar ");
+            }
+            
+            zaehler = zaehler + 1;
+        }
+        
+      }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
