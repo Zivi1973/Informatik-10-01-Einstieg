@@ -1,0 +1,122 @@
+import java.util.Scanner;
+
+
+public class schleifen {
+    // Aufgaben 
+    // 1. Zähle von 1 bis 20
+    // 2. Zähle von 1 bis 40 in zweire schritten 2,4,6... 40.
+    // 3. Zähle von 15 bis 1
+
+    public static void aufgabe1() {
+        int zahl = 0;
+        while (zahl < 21){
+            System.out.printf(zahl +"%n");
+            zahl = zahl + 1; 
+        }
+    }
+
+    public static void aufgabe2() {
+        int zahl = 0;
+        while(zahl < 41 ){
+            System.out.printf(zahl + "%n");
+            zahl = zahl + 2; 
+        }
+    }
+
+    public static void aufgabe3() {
+        int zahl = 15; 
+        while(zahl > -1){
+            System.out.printf(zahl + "%n");
+            zahl = zahl - 1; 
+        }
+    }
+
+    public static void bonusaufgabe() {
+        int x = 1 + (int) (Math.random() * 100);
+        System.out.println(x);
+        while(x > 1) {
+            if(x % 2 == 0){
+                // Zahl ist gerade
+                System.out.println("zahl ist gerade");
+                x = x / 2;
+            } else if (x % 2 == 1) {
+                // Zahl ist ungerade
+                System.out.println("zahl ist ungerade");
+                x = x * 3 + 1; 
+            } 
+        }
+        System.out.println(x);
+    }
+    
+    public static void geradeUngeradeTest() {
+        int zahl = 1 + (int) (Math.random() * 100);
+        System.out.println(zahl);
+        System.out.println(zahl / 2 * 2);
+        
+        while (zahl > 1){
+            if (zahl / 2 * 2 == zahl) {
+                System.out.println(zahl + " ist gerade");
+                zahl = zahl / 2;
+            } else {
+                System.out.println(zahl + " ist ungerade");
+                zahl = zahl * 3 + 1;
+            }
+        }
+    }
+    
+    public static void aufabe2nBenutzer(){
+        System.out.print("Zahl zw. 1 und 100: ");
+        Scanner tastatur = new Scanner (System.in);
+        int benutzerzahl = tastatur.nextInt();
+        aufgabe2nWiTafel(benutzerzahl);
+    }
+    
+    public static void aufgabe2nAlle(){
+        int zaehler = 1; 
+        while (zaehler <= 101){
+            aufgabe2nWiTafel(zaehler);
+            zaehler = zaehler + 1; 
+        }
+    }
+    
+    public static void aufgabe2nWiTafel(int zahl) {
+        //int zahl = 6;
+        //int counter = 0;
+        
+        System.out.print("Start: " + zahl);
+        
+        int schritte; //Deklaration
+        
+        schritte = 0;
+        
+        
+        while (zahl > 1){
+            
+            if (zahl / 2 * 2 == zahl) {
+                //System.out.println(zahl + " ist gerade");
+                zahl = zahl / 2;
+            } else {
+                //ystem.out.println(zahl + " ist ungerade");
+                zahl = zahl * 3 + 1;
+            }
+            
+            System.out.print( "," + zahl );
+            schritte = schritte + 1;
+        }
+        
+        System.out.println(" (" + schritte + ") ");
+    }
+    
+    public static void aufgabegauss(){
+        int zaehler = 1; 
+        int zwischen = 0; 
+        
+        while(zaehler < 101){
+            zwischen = zwischen + zaehler; 
+            zaehler = zaehler + 1;
+            System.out.println(zwischen);
+        }
+        
+    }
+    
+}
