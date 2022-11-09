@@ -1,0 +1,114 @@
+import java.util.Scanner; 
+
+public class Kommazahlen{
+    public double kommazahl;
+    
+    public Kommazahlen () {
+        kommazahl = 0.0;
+    }
+    
+    public static void ausgeben() {
+        // 1. deklaration
+        // Wir benötigen eine variable vom Typ
+        // Format: <Datentyp> <Variablenname>
+        
+        
+        double kommazahl;
+        
+        kommazahl = 1.0;
+        
+        System.out.println(kommazahl);
+        
+        System.out.printf("%.2f %n", kommazahl);
+    }
+    
+    public static void ausgeben2() {
+        System.out.println("Gebe eine Zahl ein");
+        double kommazahl;
+        Scanner sc =new Scanner(System.in);
+        String kommazahl1 = sc.nextLine();
+        kommazahl = Double.parseDouble(kommazahl1);
+        
+        System.out.println("Gebe eine zweite Zahl ein");
+        double kommazahl2;
+        Scanner cc =new Scanner(System.in);
+        String kommazahl3 = cc.nextLine();
+        kommazahl2 = Double.parseDouble(kommazahl3);
+        
+        System.out.println(kommazahl + kommazahl2);
+        System.out.println(kommazahl - kommazahl2);
+        System.out.println(kommazahl / kommazahl2);
+        System.out.println(kommazahl * kommazahl2);
+    }
+    
+    public static void ausgeben3() {
+        Scanner tastatur = new Scanner(System.in);
+        double zahl1;
+        double zahl2; 
+        
+        System.out.println("Die erste Zahl ist :");
+        zahl1 = tastatur.nextDouble();
+        
+        System.out.println("Die zwiete Zahl ist :");
+        zahl2 = tastatur.nextDouble();
+        
+        double summe = zahl1+ zahl2;
+        System.out.println(zahl1 + " + " + zahl2 + " = " + summe);
+    }
+    
+    public static void Weltbevölkerung(){
+        double anzahl; 
+        double zuwachs;
+        int seife = 1;
+        int jahr = 2022;
+        
+        anzahl = 7.948119;
+        zuwachs = 1.09; 
+        
+        while (seife == 1){
+            jahr = jahr + 1; 
+            anzahl = anzahl * zuwachs;
+            System.out.println("Im Jahr " + jahr + " ist die Weltbefölkerung bei : " + anzahl);
+        }
+    }
+    
+    public static void WeltbefölkerungML(){
+        int jahr = 2021;
+        double bevoelkerung = 7.948119;
+        double zuwachs = 66_000_000.0 / 1_000_000_000.0;
+        double wachstum = 1.0 + zuwachs / bevoelkerung;
+        //double wachstum = 1.02; // 1.02  + zuwachs / bevoelkerung
+        System.out.printf("Wachstum: %.4f %n", wachstum);
+        System.out.printf("Bevölkerung in %d: %.4f Mrd. %n", jahr, bevoelkerung);
+        
+        while (jahr < 2102){
+            bevoelkerung = bevoelkerung * wachstum;
+            jahr = jahr + 1;
+            System.out.printf("Bevölkerung in %d: %.4f Mrd. %n", jahr, bevoelkerung);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
