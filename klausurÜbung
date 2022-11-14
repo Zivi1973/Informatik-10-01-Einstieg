@@ -1,0 +1,49 @@
+public class KlausurUebung{
+    // UML-diagramm ist auch wihctog 
+    private String vorname; 
+    private String nachname;
+    private int alter;
+    //usw.
+    
+    
+    /*
+     * Klausurübung 
+     * ---------------------------------------
+     * -vorname:String 
+     * -nachname:String 
+     * -alter: int 
+     * -stufe:int 
+     * -durchschnitt:double
+     * 
+     * ----------------------------------------
+     * +rechnen(x:int)
+     * +druckeDeckblatt()
+     * 
+     */
+    
+    
+    
+    public static void kommazahl(){
+        System.out.printf("%.2f", 3.145); // zwei nachkommerstellen 
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
