@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Geldzaehler{
+    
+    public Scanner tastatur;
+    double stand = 0; 
+    int anzahl10cent = 0;
+    int anzahl20cent = 0;
+    int anzahl50cent = 0;
+    int anzahl1euro = 0;
+    int anzahl2euro = 0;
+    
+    public Geldzaehler(){
+        tastatur = new Scanner(System.in);
+    }
+    
+    public void wirfMuenzeEin(){
+        System.out.println("Wirf eine münze ein(0,50/0,20/0,10/1/2)");
+        System.out.println("Schreibe f wenn alle münzen eingeworfen sind.");
+        String eingabe = tastatur.nextLine();
+        //stand = Integer.parseInt(eingabe);
+        if (eingabe == "0,50" || eingabe == "0,20" || eingabe == "0,10" || eingabe == "1" || eingabe == "2"  ){
+        }
+    }
+    
+    public void druckeuebersicht(){
+    
+    }
+}
