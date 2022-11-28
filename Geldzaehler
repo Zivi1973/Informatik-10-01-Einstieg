@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Geldzaehler{
-    
+
     public Scanner tastatur;
     double stand = 0; 
     int anzahl10cent = 0;
@@ -9,21 +9,73 @@ public class Geldzaehler{
     int anzahl50cent = 0;
     int anzahl1euro = 0;
     int anzahl2euro = 0;
-    
+    double eingabe2 = 0;
+    String eingabe;
+
     public Geldzaehler(){
         tastatur = new Scanner(System.in);
     }
-    
+
     public void wirfMuenzeEin(){
-        System.out.println("Wirf eine münze ein(0,50/0,20/0,10/1/2)");
-        System.out.println("Schreibe f wenn alle münzen eingeworfen sind.");
-        String eingabe = tastatur.nextLine();
-        //stand = Integer.parseInt(eingabe);
-        if (eingabe == "0,50" || eingabe == "0,20" || eingabe == "0,10" || eingabe == "1" || eingabe == "2"  ){
+        System.out.println("Wirf eine münze ein(0.50/0.20/0.10/1/2)");
+        System.out.println("Schreibe 20 wenn alle münzen eingeworfen sind.");
+        //String eingabe;
+        String eingabe3 = tastatur.nextLine();
+        eingabe2 = Double.parseDouble(eingabe3);
+        while(eingabe2 == 0 || eingabe2 == 0.50 || eingabe2 == 0.20 || eingabe2 == 0.10 || eingabe2 == 1 || eingabe2 == 2 ){
+            eingabe = tastatur.nextLine();
+            eingabe2 = Double.parseDouble(eingabe);
+            if (eingabe2 == 0.50 || eingabe2 == 0.20 || eingabe2 == 0.10 || eingabe2 == 1 || eingabe2 == 2 || eingabe2 == 20 ){
+                if(eingabe2 == 0.50){
+                    anzahl50cent = anzahl50cent + 1;
+                    stand = stand + 0.50; 
+                }
+
+                if(eingabe2 == 0.20){
+                    anzahl20cent = anzahl20cent + 1;
+                    stand = stand + 0.20; 
+                }
+
+                if(eingabe2 == 0.10){
+                    anzahl10cent = anzahl10cent + 1;
+                    stand = stand + 0.10; 
+                }
+
+                if(eingabe2 == 1){
+                    anzahl1euro = anzahl1euro + 1;
+                    stand = stand + 1; 
+                }
+
+                if(eingabe2 == 2){
+                    anzahl2euro = anzahl2euro + 1;
+                    stand = stand + 2; 
+                }
+                if(eingabe2 == 20){
+                    druckeuebersicht();
+                    return;
+                }
+            }
+            else{
+                System.out.println("Das ist Falschgeld bitte nur echtgeld einwefen");
+                eingabe2 = 0;
+            }
+            
         }
     }
-    
+
     public void druckeuebersicht(){
-    
+        System.out.println("Ihr Geld : ");
+        System.out.println( anzahl10cent + "x 10 Cent");
+        System.out.println( anzahl20cent + "x 20 Cent");
+        System.out.println( anzahl50cent + "x 50 Cent");
+        System.out.println( anzahl1euro + "x 1 Euro");
+        System.out.println( anzahl2euro + "x 2 Euro");
     }
 }
+
+
+
+
+
+
+
