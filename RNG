@@ -7,8 +7,38 @@ public class RNG{
     }
     public void tafelrng(){
             // 0 <= zuffi < 10 
-            int zuffi = generator.nextInt(6);
-            zuffi = zuffi +1;
+            int zuffi = generator.nextInt(6) + 1;
+            //zuffi = zuffi +1;
             System.out.println(zuffi);
     }
+    public void HA(){
+        //a)
+        int wuerfel1 = generator.nextInt(20) + 1;
+        System.out.println(wuerfel1);
+        
+        //b)
+        int wuerfel2 = generator.nextInt(20) - 10;
+        System.out.println(wuerfel2);
+        
+        //c)
+        int wuerfel3 = generator.nextInt(20) - 10;
+        System.out.println(wuerfel3);
+        
+        //d)
+        int wuerfel4 = generator.nextInt(6) + 1;
+        int wuerfel5 = generator.nextInt(6) + 1;
+        System.out.println( wuerfel4 + wuerfel5);
+        
+        //e)
+        int wuerfel6 = generator.nextInt(6) + 1;
+        int wuerfel7 = generator.nextInt(6) + 1;
+        int wuerfel8 = generator.nextInt(6) + 1;
+        System.out.println( wuerfel7 + wuerfel6 + wuerfel8);
+    }    
 }
+// Programmieren Sie folgende Würfel:
+    // a) ein 20-seitiger Würfel (1-20)
+    // b) ein Würfel von -10 bis +10 (einschliesslich)
+    // c) ein Würfel von -10 bis +20 (einschliesslich)
+    // d) zwei Sechseitige Würfel (2-12) Vorsicht!
+    // e) drei sechsseitige Würfel (3-18) Vorsicht!
