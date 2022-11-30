@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class klausur{
+    public Scanner tastatur;
+    double eingabe2;
+    double eingabe3;
+    public klausur(){
+       tastatur = new Scanner(System.in);
+    }
+    
+    public void groesse(){
+        System.out.println("Gib deine Geschlecht an (1 = männlich, 2 = weiblich, 3 = divers)");
+        String eingabe = tastatur.nextLine();
+        System.out.println("Gib deine Größe an (z.B. 188)");
+        eingabe2 = Double.parseDouble(eingabe);
+        
+        String groese = tastatur.nextLine();
+        eingabe3 = Double.parseDouble(groese);
+        
+        if(eingabe2 == 1 ){
+            if(eingabe3 < 180 ){
+                System.out.println("Hahah du bist unterm durchschnitt");
+            }
+            if(eingabe3 >= 180 ){
+                System.out.println("Du bist überm Durhcschnitt nice ");
+            }
+        }
+        
+        if(eingabe2 == 2 ){
+            if(eingabe3 < 166 ){
+                System.out.println("Hahah du bist unterm durchschnitt");
+            }
+            if(eingabe3 >= 166 ){
+                System.out.println("Du bist überm Durhcschnitt nice ");
+            }
+        }
+        
+        if(eingabe2 == 3 ){
+            if(eingabe3 < 172 ){
+                System.out.println("Hahah du bist unterm durchschnitt");
+            }
+            if(eingabe3 >= 172 ){
+                System.out.println("Du bist überm Durhcschnitt nice ");
+            }
+        }
+        
+    }
+
+}
