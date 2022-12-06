@@ -1,10 +1,15 @@
 
 public class mathe{
-    double ergebnis;
+    double ergebnis = 0;
+    int plus = 1;
+    int minus = 2;
     int i = 1;
     public void aufgabe(){
         while(i == 1){
-            
+         ergebnis = ergebnis + plus - minus;
+         System.out.println(ergebnis);
+         plus = plus + 2;
+         minus = minus + 2;
         }
     }
 }
