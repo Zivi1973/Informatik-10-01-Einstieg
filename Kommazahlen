@@ -87,6 +87,26 @@ public class Kommazahlen{
             System.out.printf("Bevölkerung in %d: %.4f Mrd. %n", jahr, bevoelkerung);
         }
     }
+    public static void annaaherung() {
+        double nenner = 1.0;
+        int vorzeichen = +4;
+        double alterwert = 0.0;
+        double wert = 0.0;
+        
+        while (true){
+            wert = wert  + (double) vorzeichen / nenner;
+            
+            if(Math.floor(wert*10_000) == Math.floor(alterwert*10_000)){
+                System.out.println("Wir sind fertig");
+                break;
+            }
+            
+            alterwert = wert;
+            nenner = nenner + 2;
+            vorzeichen = -vorzeichen;
+        }
+        System.out.println("Nenner" + nenner + ": " + wert);
+    }
 }
 
 
