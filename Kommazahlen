@@ -105,7 +105,7 @@ public class Kommazahlen{
             nenner = nenner + 2;
             vorzeichen = -vorzeichen;
         }
-        System.out.println("Nenner" + nenner + ": " + wert);
+        System.out.printf("Nenner %d: %.5f", nenner, wert);
     }
 }
 
