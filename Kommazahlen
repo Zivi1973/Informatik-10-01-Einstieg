@@ -96,12 +96,13 @@ public class Kommazahlen{
         while (true){
             wert = wert  + (double) vorzeichen / nenner;
             
-            if(Math.floor(wert*10_000) == Math.floor(alterwert*10_000)){
+            double gerundet = Math.floor(wert*10_000);
+            if(gerundet == alterwert){
                 System.out.println("Wir sind fertig");
                 break;
             }
             
-            alterwert = wert;
+            alterwert = Math.floor(alterwert*10_000);
             nenner = nenner + 2;
             vorzeichen = -vorzeichen;
         }
