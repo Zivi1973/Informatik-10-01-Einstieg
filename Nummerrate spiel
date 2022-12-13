@@ -5,23 +5,35 @@ public class Nummerratespiel {
     public static void Ichrate() {
 
         Random random = new Random();
+        boolean weiterspielen = true;
 
         int ComZahl = random.nextInt(100) + 1;
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Bitte rate eine Zahl zwischen 1 und 100:");
-            int meZahl = scanner.nextInt();
 
-            if (meZahl == ComZahl) {
-                System.out.println("Du hast die Zahl erraten! Glückwunsch!");
-                break;
-            } else {
+        while(weiterspielen == true){
+            while (true) {
+                System.out.println("Bitte rate eine Zahl zwischen 1 und 100:");
+                int meZahl = scanner.nextInt();
 
-                if (meZahl < ComZahl) {
-                    System.out.println("Deine gerate Zahl ist zu klein. Versuche es erneut.");
+                if (meZahl == ComZahl) {
+                    System.out.println("Du hast die Zahl erraten! Glückwunsch!");
+                    break;
                 } else {
-                    System.out.println("Deine gerate Zahl ist zu groß. Versuche es erneut.");
+
+                    if (meZahl < ComZahl) {
+                        System.out.println("Deine gerate Zahl ist zu klein. Versuche es erneut.");
+                    } else {
+                        System.out.println("Deine gerate Zahl ist zu groß. Versuche es erneut.");
+                    }
                 }
+            }
+            System.out.println("Willst du weiter spielen ?? ");
+            System.out.println("gebe eine 1 ein um weiter zuspielen,");
+            System.out.println("gebe eine 2 ein um aufzuhören zu spielen.");
+            int zweiter = scanner.nextInt();
+            if(zweiter == 2 ){
+                System.out.println("Okö bis bald");
+                weiterspielen = false;
             }
         }
     }
@@ -40,13 +52,7 @@ public class Nummerratespiel {
             System.out.println("Wenn es dein Zahl ist tippe r ein,");
             System.out.println("Wenn deine Zahl größer ist tippe g ein,");
             System.out.println("Wenn deine Zahl kleiner ist tippe k ein,");
-            int richtig = scanner.nextString();
-            
+
         }
     }
 }
-
-
-
-
-
