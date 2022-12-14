@@ -5,18 +5,22 @@ public class Nummerratespiel {
     public static void Ichrate() {
 
         Random random = new Random();
-        boolean weiterspielen = true;
+        boolean weiterspielen;
+        int versuche = 1;
 
-        int ComZahl = random.nextInt(100) + 1;
         Scanner scanner = new Scanner(System.in);
 
-        while(weiterspielen == true){
+        do{
+            int ComZahl = random.nextInt(100) + 1;
+            System.out.println("Bitte rate eine Zahl zwischen 1 und 100:");
             while (true) {
-                System.out.println("Bitte rate eine Zahl zwischen 1 und 100:");
+
                 int meZahl = scanner.nextInt();
+                versuche += 1;
 
                 if (meZahl == ComZahl) {
                     System.out.println("Du hast die Zahl erraten! Glückwunsch!");
+                    System.out.println("Toll du hast nur " + versuche + " Versuche gebraucht");
                     break;
                 } else {
 
@@ -26,16 +30,11 @@ public class Nummerratespiel {
                         System.out.println("Deine gerate Zahl ist zu groß. Versuche es erneut.");
                     }
                 }
+
             }
-            System.out.println("Willst du weiter spielen ?? ");
-            System.out.println("gebe eine 1 ein um weiter zuspielen,");
-            System.out.println("gebe eine 2 ein um aufzuhören zu spielen.");
-            int zweiter = scanner.nextInt();
-            if(zweiter == 2 ){
-                System.out.println("Okö bis bald");
-                weiterspielen = false;
-            }
-        }
+            System.out.println("Willst du weiter spielen ??  (1=Ja, 2=nein ");
+            weiterspielen = scanner.nextInt() == 1; 
+        }while(weiterspielen);
     }
 
     public static void Comraet(){
@@ -45,14 +44,51 @@ public class Nummerratespiel {
         int min = 1;
         int max = 100;
         int anzahlraten = 0;
+        boolean boo = true; 
 
-        while(true){
-            int zergebnis = min + max /2 +1;
+        do{
+            int zergebnis = (min + max) /2 ;
             System.out.println("Ist deine Zahl: " + zergebnis );
-            System.out.println("Wenn es dein Zahl ist tippe r ein,");
-            System.out.println("Wenn deine Zahl größer ist tippe g ein,");
-            System.out.println("Wenn deine Zahl kleiner ist tippe k ein,");
+            System.out.println("Wenn es dein Zahl ist tippe 1 ein,");
+            System.out.println("Wenn deine Zahl größer ist tippe 2 ein,");
+            System.out.println("Wenn deine Zahl kleiner ist tippe 3 ein,");
+            int apfel = scanner.nextInt();
+            
+            if (apfel == 2){
+                min = zergebnis;
+            }
+            else if (apfel == 3) {
+                max = zergebnis;
+            }
+            else if (apfel == 1) {
+                System.out.println("Ja, ich habe es geschafft");
+                boo = false;
+            }
+            else {
+                System.out.println("Du Lugner das gibt es nicht");
+            }
+        }while(boo);
+    }
 
-        }
+    public static void TafelComRaten(){
+        //Wir fangen bei 1 zu raten und
+        //wenn es falsch ist; raten wir die nächsthöhere Zahl 
+        Scanner s = new Scanner(System.in);
+        int ratezahl = 1;
+        int ergebnis;
+        do{
+            System.out.println("Ist es die " + ratezahl + " ? (1=ja, 2=nein)");
+            ergebnis = s.nextInt();
+
+            if (ergebnis == 2){
+                ratezahl = ratezahl + 1; 
+            }
+        }while(ergebnis == 2);
+        
+        System.out.print("Hurra, ich bin so schlau");
     }
 }
+
+
+
+
