@@ -42,9 +42,11 @@ public class Nummerratespiel {
         Scanner scanner = new Scanner(System.in);
         int meZahl = scanner.nextInt();
         int min = 1;
-        int max = 100;
+        int max = 1000;
         int anzahlraten = 0;
         boolean boo = true; 
+        int apfel;
+        
 
         do{
             int zergebnis = (min + max) /2 ;
@@ -52,21 +54,23 @@ public class Nummerratespiel {
             System.out.println("Wenn es dein Zahl ist tippe 1 ein,");
             System.out.println("Wenn deine Zahl größer ist tippe 2 ein,");
             System.out.println("Wenn deine Zahl kleiner ist tippe 3 ein,");
-            int apfel = scanner.nextInt();
+            apfel = scanner.nextInt();
             
             if (apfel == 2){
-                min = zergebnis;
+                min = zergebnis +1;
             }
             else if (apfel == 3) {
-                max = zergebnis;
+                max = zergebnis -1;
             }
             else if (apfel == 1) {
                 System.out.println("Ja, ich habe es geschafft");
+                System.out.println("Mit nur " + anzahlraten + " Versuchen");
                 boo = false;
             }
             else {
                 System.out.println("Du Lugner das gibt es nicht");
             }
+            anzahlraten = anzahlraten +1;
         }while(boo);
     }
 
