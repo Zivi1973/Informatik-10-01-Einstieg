@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class dezimalRechner {
+  public static void main() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Geben Sie eine Dezimalzahl ein: ");
+    int dezimalZahl = scanner.nextInt();
+
+    String binary = "";
+    while (dezimalZahl > 0) {
+      int rest = dezimalZahl % 2;
+      binary = rest + binary;
+      dezimalZahl = dezimalZahl / 2;
+    }
+
+    System.out.println("Die Binärzahl ist: " + binary);
+  }
+}
