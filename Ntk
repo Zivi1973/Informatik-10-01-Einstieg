@@ -1,0 +1,3 @@
+//Das Programm fragt den Benutzer nach einer Dezimalzahl und wandelt sie dann in eine Binärzahl um,
+// indem es sie durch 2 teilt und den Rest speichert. Die Binärzahl wird in einer String-Variablen 
+//gespeichert und am Ende ausgegeben. Dadurhc wird es in einer Liste gespeichert
