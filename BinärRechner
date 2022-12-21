@@ -17,6 +17,87 @@ public class dezimalRechner {
     }
 
     public static void dezimalToBinaryTafel(int dezimal){
-        System.out.println();
+        String ausgabe = ""; 
+        
+        if (dezimal >= 128){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 128;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 64){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 64;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 32){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 32;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 16){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 16;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 8){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 8;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 4){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 4;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 2){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 2;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
+        if (dezimal >= 1){
+            ausgabe = ausgabe + "1";
+            
+            dezimal = dezimal - 1;
+        }
+        else {
+            ausgabe = ausgabe + "0"; 
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
